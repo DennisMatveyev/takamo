@@ -12,7 +12,6 @@ class PostgresModel:
         cur.execute('SELECT * from action_daemon.actions WHERE completed IS FALSE AND time_to_run <= CURRENT_TIMESTAMP ;')
         actions = cur.fetchall()
         cur.close()
-
         return actions
 
 
