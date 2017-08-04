@@ -14,6 +14,8 @@ class Facade:
         logger = Logger.get_logger()
         logger.info("Action Daemon started running.")
 
+        db_conn, rabbit_conn = None, None
+
         try:
             # creating connection to Postgres and reading data
             db_conn = Connector().get_postgres_conn()
@@ -29,5 +31,6 @@ class Facade:
         except Exception as e:
             logger.error('Error: {}'.format(e))
         finally:
-            db_conn.close()
-            rabbit_conn.close()
+            if db_conn and rabbit_conn:
+                db_conn.close()
+                rabbit_conn.close()
