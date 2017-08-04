@@ -1,6 +1,5 @@
 import json
 import os
-# from json import JSONDecodeError
 
 from .logger import Logger
 
@@ -31,8 +30,7 @@ class MetaConfiguration(type):
                 setattr(instance, field, config_obj[field])
         except FileNotFoundError as err:
             Logger.get_logger().warn("Config file hadn't been found at `%s` path" % config_path)
-        # except JSONDecodeError as err:
-        #     Logger.get_logger().warn("Config parse error at `%s` path" % config_path)
+
         return instance
 
 
