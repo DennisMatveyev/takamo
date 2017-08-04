@@ -1,9 +1,9 @@
 import unittest
 from unittest.mock import MagicMock, patch
 
-from core.config import configuration
-from resources import Connector
-from core.logger import Logger
+from src.core.config import configuration
+from src.resources import Connector
+from src.core.logger import Logger
 
 
 class TestConnector(unittest.TestCase):

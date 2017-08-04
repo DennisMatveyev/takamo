@@ -6,7 +6,7 @@ from .logger import Logger
 
 
 class MetaConfiguration(type):
-    ENVIRON_CONFIG_PATH = '../settings.json'  # default config path
+    ENVIRON_CONFIG_PATH = './settings.json'  # default config path
     instance = None  # lonely single instance
 
     def __call__(cls, *args, **kwargs):

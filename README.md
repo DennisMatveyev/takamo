@@ -2,12 +2,7 @@
 
 ``` sh
 pip install -r requirements.txt
-export ENVIRON_CONFIG_PATH=settings.json
-python src/main.py
-```
-
-# Test it:
-```sh
 cd src
-python -m unittest test
+export ENVIRON_CONFIG_PATH=settings.json
+python main.py
 ```

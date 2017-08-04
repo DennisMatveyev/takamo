@@ -28,6 +28,6 @@ class Facade:
             logger.info("Action Daemon terminated normally.")
         except Exception as e:
             logger.error('Error: {}'.format(e))
-
-        db_conn.close()
-        rabbit_conn.close()
+        finally:
+            db_conn.close()
+            rabbit_conn.close()
