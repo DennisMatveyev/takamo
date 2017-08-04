@@ -1,0 +1,7 @@
+{
+  "RABBIT_MQ_HOST": "0.0.0.0",
+  "RABBIT_EXCHANGE": "",
+  "RABBIT_ROUTING_KEY": "orchestrator",
+  "POSTGRES_LINK": "postgresql://productioncenter:productioncenter@127.0.0.1:5432/productioncenter",
+  "LOG_FILE": "./action_daemon_logfile.log"
+}
